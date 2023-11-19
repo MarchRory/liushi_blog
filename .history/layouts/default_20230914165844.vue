@@ -1,0 +1,22 @@
+<script setup>
+const listenWindowScroll = () => {
+    // 使用 process.client 判断是否在客户端, 服务端没有window
+    if (process.client) {
+        window.addEventListener('mousewheel', function (e) {
+            const isDown = e.deltaY > 0
+            if (isDown) {
+
+            }
+        })
+    }
+}
+listenWindowScroll()
+</script>
+<template>
+    <div>
+        <ClientOnly>
+            <Navbar class=" duration-150"></Navbar>
+        </ClientOnly>
+        <slot />
+    </div>
+</template>

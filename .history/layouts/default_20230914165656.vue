@@ -1,0 +1,20 @@
+<script setup>
+const listenWindowScroll = () => {
+    // 使用 process.client 判断是否在客户端, 服务端没有window
+    if (process.client) {
+        window.addEventListener('mousewheel', function (e) {
+            const isUp = e.deltaY > 0
+
+        })
+    }
+}
+listenWindowScroll()
+</script>
+<template>
+    <div>
+        <ClientOnly>
+            <Navbar></Navbar>
+        </ClientOnly>
+        <slot />
+    </div>
+</template>

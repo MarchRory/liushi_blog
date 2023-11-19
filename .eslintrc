@@ -1,0 +1,19 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": [
+        "@nuxtjs/eslint-config-typescript",
+        "plugin:nuxt/recommended",
+        "plugin:prettier/recommended",
+        "plugin:vue/vue3-recommended",
+        "standard", 
+        "prettier"
+    ],
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": 1
+    }
+}
